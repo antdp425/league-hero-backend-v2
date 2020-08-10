@@ -31,7 +31,7 @@ class LeaguesController < ApplicationController
     if @league.update(league_params)
       render json: @league
     else
-      render json: @league.errors, status: :unprocessable_entity
+      render json: {errors: @league.errors.to_hash(true)}, status: :unprocessable_entity
     end
   end
 
