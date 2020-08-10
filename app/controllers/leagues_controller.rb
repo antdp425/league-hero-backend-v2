@@ -15,14 +15,14 @@ class LeaguesController < ApplicationController
 
   # POST /leagues
   def create
-    params[:start_date] = Date.parse(params[:start_date])
-    params[:end_date] = Date.parse(params[:end_date])
+    params[:start_date] = Date.parse(params[:start_date]) if !params[:start_date]
+    params[:end_date] = Date.parse(params[:end_date]) if !params[:end_date]
     @league = League.new(league_params)
 
     if @league.save
       render json: @league, status: :created, location: @league
     else
-      render json: @league.errors, status: :unprocessable_entity
+      render json: {errors: @league.errors.to_hash(true)}, status: :unprocessable_entity
     end
   end
 
