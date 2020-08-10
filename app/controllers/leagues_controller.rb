@@ -15,6 +15,8 @@ class LeaguesController < ApplicationController
 
   # POST /leagues
   def create
+    params[:start_date] = Date.parse(params[:start_date])
+    params[:end_date] = Date.parse(params[:end_date])
     @league = League.new(league_params)
 
     if @league.save
