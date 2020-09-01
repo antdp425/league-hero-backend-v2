@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: kiddo-care_development
+  database: league-hero-v2_development
   pool: 5
   username: Anthony
   password:
@@ -47,7 +47,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: kiddo-care_test
+  database: league-hero-v2_test
   pool: 5
   username: Anthony
   password:
