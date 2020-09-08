@@ -11,15 +11,15 @@
 #  end
  
  5.times do
-    # League.first.teams.create(name:Faker::Team.name.titleize,
-    #     email:Faker::Internet.email,
-    #      phone:"6564452424")
-    # League.second.teams.create(name:Faker::Team.name.titleize,
-    #     email:Faker::Internet.email,
-    #      phone:"6564452424")
-    # League.third.teams.create(name:Faker::Team.name.titleize,
-    #     email:Faker::Internet.email,
-    #      phone:"6564452424")
+    League.first.teams.create(name:Faker::Team.name.titleize,
+        email:Faker::Internet.email,
+         phone:"6564452424")
+    League.second.teams.create(name:Faker::Team.name.titleize,
+        email:Faker::Internet.email,
+         phone:"6564452424")
+    League.third.teams.create(name:Faker::Team.name.titleize,
+        email:Faker::Internet.email,
+         phone:"6564452424")
     League.fourth.teams.create(name:Faker::Team.name.titleize,
     email:Faker::Internet.email,
         phone:"6564452424")
